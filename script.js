@@ -30,7 +30,7 @@ const car = [
 function card(nb, filtre) {
   let html = ``;
   for (let index = 0; index < nb; index++) {
-    if (car[index].color == filtre ) {
+    if (car[index].color == filtre || filtre == false) {
         html += `
         <div class="car-card">
             <img src="assets/voiture${index+1}.jpg" class="car-img">

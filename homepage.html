@@ -37,11 +37,11 @@
                     </select>
                 </div>
                 <div class="dropdown">
-                    <select id="carType" class="cartype">
+                    <select id="carColor" class="cartype">
                         <option value="all" class="allcars">Color</option>
-                        <option value="sedan" class="sedan">Blue</option>
-                        <option value="suv" class="suv">White</option>
-                        <option value="truck" class="truck">Grey</option>
+                        <option value="blue" class="blue">Blue</option>
+                        <option value="white" class="white">White</option>
+                        <option value="grey" class="grey">Grey</option>
                     </select>
                 </div>
                 <button type='submit' class="search-submit">Rechercher</button>
@@ -51,7 +51,20 @@
     <div class="cars" id="cars">
     </div>
 <script>
-        card(4, "blue");
+    document.getElementById('carColor').addEventListener('change', function() {
+        var choix = this.selectedIndex - 1; // Adjusting index for default option
+        switch (choix) {
+            case -1: 
+                card(4, false); break;
+            case 0: 
+                card(4, "blue"); break;
+            case 1: 
+                card(4, "white"); break;
+            case 2: 
+                card(4, "grey"); break;
+        }
+    });
+        card(4, false);
         includeHTML();
 </script>
 </body>
