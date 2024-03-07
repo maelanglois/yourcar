@@ -37,11 +37,11 @@
                     </select>
                 </div>
                 <div class="dropdown">
-                    <select id="carType" class="cartype">
+                    <select id="carColor" class="cartype">
                         <option value="all" class="allcars">Color</option>
-                        <option value="sedan" class="sedan">Blue</option>
-                        <option value="suv" class="suv">White</option>
-                        <option value="truck" class="truck">Grey</option>
+                        <option value="blue" class="blue">Blue</option>
+                        <option value="white" class="white">White</option>
+                        <option value="grey" class="grey">Grey</option>
                     </select>
                 </div>
                 <button type='submit' class="search-submit">Rechercher</button>
@@ -50,23 +50,21 @@
     </form>
     <div class="cars" id="cars">
     </div>
-    <script>
-        const car = ["Subaru", "Gtrr", "Voiture à 3roues", "Mitsubishi"];
-        function card(nb) {
-            let html = ``;
-            for (let index = 0; index < nb; index++) {
-                html += `
-                <div class="car-card">
-                    <img src="assets/voiture${index+1}.jpg" class="car-img">
-                    <div class="car-title">${car[index]}</div>
-                    <div class="car-location">Orléans</div>
-                    <div class="car-price">9.000$</div>
-                    <form><button type='submit' class="offer-submit"><a href="priceoffer.html">Consulter l'offre</a></button></form>
-                </div>`;
-            }
-            document.getElementById('cars').innerHTML = html;
+<script>
+    document.getElementById('carColor').addEventListener('change', function() {
+        var choix = this.selectedIndex - 1; // Adjusting index for default option
+        switch (choix) {
+            case -1: 
+                card(4, false); break;
+            case 0: 
+                card(4, "blue"); break;
+            case 1: 
+                card(4, "white"); break;
+            case 2: 
+                card(4, "grey"); break;
         }
-        card(4);
+    });
+        card(4, false);
         includeHTML();
 </script>
 </body>

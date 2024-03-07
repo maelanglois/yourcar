@@ -20,3 +20,26 @@ function includeHTML() {
     }
   }
 }
+
+const car = [
+  { name: 'Subaru',price: 9000, color: "blue" }, 
+  { name: 'Gtrr',price: 18000, color: "white" },
+  { name: 'Dirt Car',price: 2500, color: "blue" },
+  { name: 'Mitsubishi',price: 22000, color: "grey" }
+]
+function card(nb, filtre) {
+  let html = ``;
+  for (let index = 0; index < nb; index++) {
+    if (car[index].color == filtre || filtre == false) {
+        html += `
+        <div class="car-card">
+            <img src="assets/voiture${index+1}.jpg" class="car-img">
+            <div class="car-title">${car[index].name}</div>
+            <div class="car-location">Orléans</div>
+            <div class="car-price">${car[index].price}$</div>
+            <form><button type='submit' class="offer-submit"><a href="priceoffer.html">Consulter l'offre</a></button></form>
+        </div>`;
+    }
+  }
+  document.getElementById('cars').innerHTML = html;
+}
