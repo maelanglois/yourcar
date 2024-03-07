@@ -11,7 +11,15 @@
     --font1: inter;
     --font2: poppins;
 }
-
+.fin {
+    color: var(--txt1);
+    text-decoration: none;
+}   
+.joe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 body{
     margin: 0;
     padding: 0;
@@ -35,6 +43,7 @@ body{
     align-items: center;
     background-color: var(--bg1);
     font-size: 1.5em;
+    justify-content: space-between;
 }
 
 .logo{
