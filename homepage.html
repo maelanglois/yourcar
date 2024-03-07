@@ -6,14 +6,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Get your new car !</title>
+    <script src="script.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="navbar">
-            <img src="assets/logo.png" class="logo">
-            <div class="logo-title">Cardiction</div>
-        </div>
-    </nav>
+    <div w3-include-html="header.html"></div>
     <div class="header">
         <div class="header-title">Get your new car !</div>
     </div>
@@ -71,6 +67,7 @@
             document.getElementById('cars').innerHTML = html;
         }
         card(4);
-    </script>
+        includeHTML();
+</script>
 </body>
 </html>
