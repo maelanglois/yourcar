@@ -27,18 +27,20 @@ const car = [
   { name: 'Dirt Car',price: 2500, color: "blue" },
   { name: 'Mitsubishi',price: 22000, color: "grey" }
 ]
-function card(nb, filtre) {
+function card(nb, color, marque) {
   let html = ``;
   for (let index = 0; index < nb; index++) {
-    if (car[index].color == filtre || filtre == false) {
-        html += `
-        <div class="car-card">
-            <img src="assets/voiture${index+1}.jpg" class="car-img">
-            <div class="car-title">${car[index].name}</div>
-            <div class="car-location">Orléans</div>
-            <div class="car-price">${car[index].price}$</div>
-            <form><button type='submit' class="offer-submit"><a href="priceoffer.html">Consulter l'offre</a></button></form>
-        </div>`;
+    if (car[index].color == color || color == false) {
+      if (car[index].name == marque ||marque == false) {
+          html += `
+          <div class="car-card">
+              <img src="assets/voiture${index+1}.jpg" class="car-img">
+              <div class="car-title">${car[index].name}</div>
+              <div class="car-location">Orléans</div>
+              <div class="car-price">${car[index].price}$</div>
+              <form><button type='submit' class="offer-submit"><a href="priceoffer.html">Consulter l'offre</a></button></form>
+          </div>`;
+      }
     }
   }
   document.getElementById('cars').innerHTML = html;
