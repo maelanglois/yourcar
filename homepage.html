@@ -31,9 +31,10 @@
                 <div class="dropdown">
                     <select id="carType" class="cartype">
                         <option value="all" class="allcars">Model</option>
-                        <option value="sedan" class="sedan">Gtrr</option>
-                        <option value="suv" class="suv">Mitsubishi</option>
-                        <option value="truck" class="truck">Dirt car</option>
+                        <option value="Subaru" class="Subaru">Subaru</option>
+                        <option value="Gtrr" class="Gtrr">Gtrr</option>
+                        <option value="Mitsubishi" class="Mitsubishi">Mitsubishi</option>
+                        <option value="Dirt Car" class="Dirt Car">Dirt Car</option>
                     </select>
                 </div>
                 <div class="dropdown">
@@ -62,6 +63,21 @@
                 card(4, "white"); break;
             case 2: 
                 card(4, "grey"); break;
+        }
+    });
+    document.getElementById('carModel').addEventListener('change', function() {
+        var choix = this.selectedIndex - 1; // Adjusting index for default option
+        switch (choix) {
+            case -1: 
+                card(4, false, false); break;
+            case 0: 
+                card(4, false, "Subaru"); break;
+            case 1: 
+                card(4, false, "Gtrr"); break;
+            case 2: 
+                card(4, false, "Mitsubishi"); break;
+            case 3:
+                card(4, false, "Dirt Car"); break
         }
     });
         card(4, false);
