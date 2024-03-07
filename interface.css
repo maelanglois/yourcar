@@ -75,9 +75,3 @@ body{
 .inp-img{
     padding-left: 30px;
 }
-
-.footer{
-    display: flex;
-    justify-content: space-between;
-    
-}
