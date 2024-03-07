@@ -31,7 +31,7 @@ function card(nb, color, marque) {
   let html = ``;
   for (let index = 0; index < nb; index++) {
     if (car[index].color == color || color == false) {
-      if (car[index].name == marque ||marque == false) {
+      if (car[index].name == marque || marque == false) {
           html += `
           <div class="car-card">
               <img src="assets/voiture${index+1}.jpg" class="car-img">

@@ -21,7 +21,7 @@
                     <input class="inp-search" type="text" placeholder="search">
                 </div>
                 <div class="dropdown">
-                    <select id="carType" class="cartype">
+                    <select id="carType" class="carType">
                         <option value="all" class="allcars">Price</option>
                         <option value="sedan" class="sedan">0-3000</option>
                         <option value="suv" class="suv">3000-10.000</option>
@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 <div class="dropdown">
-                    <select id="carType" class="cartype">
+                    <select id="carModel" class="carType">
                         <option value="all" class="allcars">Model</option>
                         <option value="Subaru" class="Subaru">Subaru</option>
                         <option value="Gtrr" class="Gtrr">Gtrr</option>
@@ -38,7 +38,7 @@
                     </select>
                 </div>
                 <div class="dropdown">
-                    <select id="carColor" class="cartype">
+                    <select id="carColor" class="carType">
                         <option value="all" class="allcars">Color</option>
                         <option value="blue" class="blue">Blue</option>
                         <option value="white" class="white">White</option>
@@ -56,13 +56,13 @@
         var choix = this.selectedIndex - 1; // Adjusting index for default option
         switch (choix) {
             case -1: 
-                card(4, false); break;
+                card(4, false, false); break;
             case 0: 
-                card(4, "blue"); break;
+                card(4, "blue", false); break;
             case 1: 
-                card(4, "white"); break;
+                card(4, "white", false); break;
             case 2: 
-                card(4, "grey"); break;
+                card(4, "grey", false); break;
         }
     });
     document.getElementById('carModel').addEventListener('change', function() {
@@ -80,7 +80,7 @@
                 card(4, false, "Dirt Car"); break
         }
     });
-        card(4, false);
+        card(4, false, false);
         includeHTML();
 </script>
 </body>

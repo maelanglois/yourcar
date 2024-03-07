@@ -200,7 +200,7 @@ body{
     align-items: center;
     padding-left: 10px;
 }
-.cartype{
+.carType{
     background-color: var(--bg1);
     border-radius: 40px;
     border:none;
