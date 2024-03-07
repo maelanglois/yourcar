@@ -19,25 +19,37 @@
     </div>
     <form>
         <div class="searchbar">
-            <div class="searching">
-                <span class="material-symbols-outlined">search</span>
-                <input class="inp-search" type="text" placeholder="search">
+            <div class="searchbar-int">
+                <div class="searching">
+                    <span class="material-symbols-outlined">search</span>
+                    <input class="inp-search" type="text" placeholder="search">
+                </div>
+                <div class="dropdown">
+                    <select id="carType">
+                        <option value="all">All Cars</option>
+                        <option value="sedan">Gtrr</option>
+                        <option value="suv">Mitsubishi</option>
+                        <option value="truck">dirt car</option>
+                    </select>
+                </div>
+                <button type='submit' class="search-submit">Rechercher</button>
             </div>
-            <button type='submit' class="search-submit">Rechercher</button>
         </div>
     </form>
     <div class="cars" id="cars">
     </div>
     <script>
+        const car = ["Subaru", "Gtrr", "Voiture à 3roues", "Mitsubishi"];
         function card(nb) {
             let html = ``;
             for (let index = 0; index < nb; index++) {
                 html += `
                 <div class="car-card">
                     <img src="assets/voiture${index+1}.jpg" class="car-img">
-                    <div class="car-title">Peugeot jsp</div>
+                    <div class="car-title">${car[index]}</div>
                     <div class="car-location">Orléans</div>
                     <div class="car-price">9.000$</div>
+                    <form><button type='submit' class="offer-submit">Consulter l'offre</button></form>
                 </div>`;
             }
             document.getElementById('cars').innerHTML = html;
