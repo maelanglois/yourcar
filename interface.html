@@ -17,24 +17,23 @@
         <div class="information">
             <div class="name">
                 <div class="name-title">Nom du véhicule</div>
-                <input placeholder="nom" class="name-input">
+                <input id="carName" placeholder="nom" class="name-input">
             </div>
             <div class="name">
                 <div class="name-title">Nom de marque</div>
-                <input class="name-input">
+                <input id="carBrand" class="name-input">
             </div>
             <div class="name">
-                <div class="name-title">Nombre de kilometre</div>
-                <input class="name-input">
+                <div class="name-title">Nombre de kilomètres</div>
+                <input id="carMileage" class="name-input">
             </div>
             <div class="name">
                 <div class="name-title">Lieu actuel du véhicule</div>
-                <input class="name-input">
+                <input id="carLocation" class="name-input">
             </div>
             <div class="name">
-                <div class="name-title">Etat du véhicule</div>
-                <input class="name-input">
-                
+                <div class="name-title">État du véhicule</div>
+                <input id="carCondition" class="name-input">
             </div>
         </div>
         <div class="inp-img">
@@ -43,7 +42,7 @@
         </div>  
     </div>
     <div class="fait">
-        <button class="search-submit">done</button>
+        <button onclick="addCar()" class="search-submit">Done</button>
     </div>
 </body>
 <script>includeHTML();</script>

@@ -27,6 +27,24 @@ const car = [
   { name: 'Dirt Car',price: 2500, color: "blue" },
   { name: 'Mitsubishi',price: 22000, color: "grey" }
 ]
+function addCar() {
+  const carName = document.getElementById('carName').value;
+  const carPrice = document.getElementById('carPrice').value;
+  const carColor = document.getElementById('carColor').value;
+  
+  let cars = JSON.parse(localStorage.getItem('cars'));
+
+  const newCar = {
+    name: carName,
+    price: carPrice,
+    color: carColor
+  };
+  cars.push(newCar);
+
+  localStorage.setItem('cars', JSON.stringify(cars));
+
+  alert('Car added successfully!');
+}
 function card(nb, color, marque) {
   let html = ``;
   for (let index = 0; index < nb; index++) {
