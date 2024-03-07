@@ -64,11 +64,12 @@ body{
 
 .information{
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     padding-left: 20px;
     width: 50%;
     background-color: #ababab;
     display: block;
+    justify-content: space-evenly;
 }
 
 .inp-img{
@@ -78,5 +79,5 @@ body{
 .footer{
     display: flex;
     justify-content: space-between;
-    flex-direction: column-reverse;
+    
 }
