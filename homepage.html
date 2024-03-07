@@ -25,11 +25,27 @@
                     <input class="inp-search" type="text" placeholder="search">
                 </div>
                 <div class="dropdown">
-                    <select id="carType">
-                        <option value="all">All Cars</option>
-                        <option value="sedan">Gtrr</option>
-                        <option value="suv">Mitsubishi</option>
-                        <option value="truck">dirt car</option>
+                    <select id="carType" class="cartype">
+                        <option value="all" class="allcars">Price</option>
+                        <option value="sedan" class="sedan">0-3000</option>
+                        <option value="suv" class="suv">3000-10.000</option>
+                        <option value="truck" class="truck"> + 10.000</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <select id="carType" class="cartype">
+                        <option value="all" class="allcars">Model</option>
+                        <option value="sedan" class="sedan">Gtrr</option>
+                        <option value="suv" class="suv">Mitsubishi</option>
+                        <option value="truck" class="truck">Dirt car</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <select id="carType" class="cartype">
+                        <option value="all" class="allcars">Color</option>
+                        <option value="sedan" class="sedan">Blue</option>
+                        <option value="suv" class="suv">White</option>
+                        <option value="truck" class="truck">Grey</option>
                     </select>
                 </div>
                 <button type='submit' class="search-submit">Rechercher</button>
